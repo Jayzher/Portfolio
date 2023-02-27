@@ -104,32 +104,42 @@
 										<div class="">
 											<form class="d-flex flex-column align-items-center">
 												<label class="text-3 pt-2">Name:</label>
-												<input class="border rounded text-6 pl-1 w-100" type="text" name="">
+												<input id="clear1" class="border rounded text-6 pl-1 w-100" type="text" name="">
 												<label class="text-3 pt-2 pl-1">Email:</label>
-												<input class="border rounded text-6 pl-1 w-100" type="text" name="">
+												<input id="clear2" class="border rounded text-6 pl-1 w-100" type="email" name="">
 												<label class="text-3 pt-2">Contact No:</label>
-												<input class="border rounded text-6 pl-1 w-100" type="number" name="contact">
+												<input id="clear3" class="border rounded text-6 pl-1 w-100" type="number" name="contact">
 												<ul class="col">
 													<div class="d-flex flex-row">
-														<input class="d-inline" type="checkbox" name="sim" value="Smart">
+														<input id="clear4" class="d-inline" type="checkbox" name="sim" value="Smart">
 														<li class="d-inline">Smart</li>
 													</div>
 													<div class="d-flex flex-row d-block">
-														<input class="d-inline" type="checkbox" name="sim" value="Smart">
+														<input id="clear5" class="d-inline" type="checkbox" name="sim" value="Smart">
 														<li class="d-inline">Globe</li>
 													</div>
 													<div class="d-flex flex-row d-block">
-														<input class="d-inline" type="checkbox" name="sim" value="Smart">
+														<input id="clear6" class="d-inline" type="checkbox" name="sim" value="Smart">
 														<li class="d-inline">TM</li>
 													</div>
 													<div class="d-flex flex-row d-block">
-														<input class="d-inline" type="checkbox" name="sim" value="Smart">
+														<input id="clear7" class="d-inline" type="checkbox" name="sim" value="Smart">
 														<li class="d-inline">TNT</li>
 													</div>
 												</ul>
-												<label class="text-3 pt-2 ">Message:</label>
-												<textarea class="border rounded text-6 pl-1 w-100" rows="6" name="message"></textarea>
+												<label class="text-3">Message:</label>
+												<textarea id="clear8" class="border rounded text-6 pl-1 w-100" rows="6" name="message"></textarea>
+												<button type="button" class="btn text-3 pl-3 pr-3 card mt-3" onclick="sent()" data-toggle="modal" data-target="#exampleModalCenter">Send</button>
 											</form>
+											<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+											  <div class="modal-dialog modal-dialog-centered" role="document">
+											    <div class="modal-content card-2 ml-5 mr-5 mb-5">
+											      <div class="modal-body">
+											       <p class="text-3">-- Message Sent --</p>
+											      </div>
+											    </div>
+											  </div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -165,6 +175,19 @@
 
 	<!-- js Script -->
 	<script type="text/javascript">
+
+		function sent() {
+			 document.getElementById("clear1").value = "";
+			 document.getElementById("clear2").value = "";
+			 document.getElementById("clear3").value = "";
+			 document.getElementById("clear4").checked = false;
+			 document.getElementById("clear5").checked = false;
+			 document.getElementById("clear6").checked = false;
+			 document.getElementById("clear7").checked = false;
+			 document.getElementById("clear8").value = "";
+		}
+
+
 	 document.getElementById("contact").style.color = "#574822";
 	 document.getElementById("contact").style.backgroundColor = "#d1b977";
 	 document.getElementById("nav-contact").style.color = "#E4A80A";

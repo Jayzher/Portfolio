@@ -45,6 +45,14 @@ body {
 	transition: 2s;
 }
 
+.card-2 {
+	border: solid 3px black;
+	align-items: center;
+	background-color: limegreen;
+	cursor: pointer;
+	transition: 2s;
+}
+
 .card:hover {
 	background-color: #6e6042;
 	color: azure;
